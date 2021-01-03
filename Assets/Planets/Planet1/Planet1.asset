@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1de2f37cb814674b8612ce3013594bf, type: 3}
   m_Name: Planet1
   m_EditorClassIdentifier: 
-  seedSurface: 81465493
-  seedLand: 1776300328
-  seedLandColour01: 686408548
-  seedLandColour23: 1082505550
-  seedCity: 470177396
-  seedCloud: 1147134832
+  seedSurface: 813856856
+  seedLand: 73734855
+  seedLandColour01: 1687668095
+  seedLandColour23: 1821617096
+  seedCity: 1341152954
+  seedCloud: 1676660393
   surfaceNoise:
     scale: 0.9
     octaves: 10
@@ -67,12 +67,12 @@ MonoBehaviour:
   waterLevel: 0.5
   waterSpecular: 1
   waterFalloff: 3.1
-  iceColour: {r: 1, g: 1, b: 1, a: 1}
-  iceReach: 0.63
+  iceColour: {r: 1, g: 1, b: 0.91764706, a: 1}
+  iceReach: 0.308
   iceHeight: 0.986
   shadowRange: 20
   shadowStrength: 0.4
-  cityReach: 0.7
+  cityReach: 0.8
   cityHeight: 0.8
   cityColour: {r: 0.14509805, g: 0.105882354, b: 0.06666667, a: 1}
   cityCount: 128
@@ -102,6 +102,6 @@ MonoBehaviour:
   cloudColour0: {r: 1, g: 1, b: 1, a: 1}
   cloudColour1: {r: 0, g: 0, b: 0, a: 0}
   cloudSpin: 1
-  cloudNormalScale: 0.02
-  size: 3
+  cloudNormalScale: 0.01
+  size: 5
   combineHeightWithCity: 1

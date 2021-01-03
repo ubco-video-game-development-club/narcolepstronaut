@@ -8,9 +8,9 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Planet1
-  m_Shader: {fileID: 4800000, guid: e2204c6c62f801848ba806cf82fe630e, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
+  m_Shader: {fileID: 4800000, guid: 2e0c34b3774c93542a711016b97aeb1f, type: 3}
+  m_ShaderKeywords: ATMO_ON MOBILE_OFF
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -19,51 +19,81 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _AtmosTex:
-        m_Texture: {fileID: 2800000, guid: 72e473c0a8af4744eabef75ad48ab94c, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 93fa7224b9d769d46a38b2d84cbf56d3, type: 3}
+        m_Texture: {fileID: 2800000, guid: f6fe240929bdb4a4691fc8c2d264f1ac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _CloudMap:
-        m_Texture: {fileID: 2800000, guid: fe20667c138a9294abf3645b1655f797, type: 3}
+        m_Texture: {fileID: 2800000, guid: eb198a0dc182542419d2bfff749b5288, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _CloudNormalMap:
-        m_Texture: {fileID: 2800000, guid: f7000b06fdb9d194b9d562d87bd59200, type: 3}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _GroundMap:
-        m_Texture: {fileID: 2800000, guid: 9ce9b06d169717b4ea9d1861540796d0, type: 3}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _IllumMap:
-        m_Texture: {fileID: 2800000, guid: 5cdb7e135d6c78a4a8e39a38b16c5691, type: 3}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _IllumTex:
-        m_Texture: {fileID: 2800000, guid: 3e75551bd233e1e42bd4a3bfe68336a6, type: 3}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMap:
+        m_Texture: {fileID: 2800000, guid: 34441d0019fa4384886e710213b2d993, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 1bc46539e21fd964887c224c958f21be, type: 3}
+        m_Texture: {fileID: 2800000, guid: 21a9137ef675e6b49919580bcc84cff6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _NormalMap:
-        m_Texture: {fileID: 2800000, guid: 08f76a0160f30c34abea5db61c219734, type: 3}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Alpha: 1
-    - _CityEmissionStrength: 0.5
-    - _CloudAlpha: 1
-    - _EmissionStr: 0.8214286
-    - _Parallax: 0.017321428
-    - _Shininess: 61.199265
+    - _AirGlowStrength: 0.2
+    - _BumpScale: 1
+    - _CloudShadowsStrength: 0
+    - _CloudSpeed: 0.05
+    - _CloudStrength: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _LightMapIntensity: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Shininess: 20
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColour: {r: 1, g: 0.8039216, b: 0.3764706, a: 1}
-    - _SpecularColour: {r: 1, g: 1, b: 0.8039216, a: 0.44313726}
+    - _Color1: {r: 0, g: 0.7490196, b: 0.09411765, a: 0}
+    - _Color2: {r: 0.7490196, g: 0.60784316, b: 0.08627451, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

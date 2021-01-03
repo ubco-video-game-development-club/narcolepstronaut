@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Moon : Planet
 {
-    public Planet orbitPlanet;
+    public ShadedPlanet orbitPlanet;
     public Vector3 orbitAxis;
     public float orbitSpeed;
 
