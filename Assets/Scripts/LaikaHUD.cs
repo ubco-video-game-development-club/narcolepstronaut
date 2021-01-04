@@ -49,12 +49,9 @@ public class LaikaHUD : MonoBehaviour
         hudGroup = GetComponent<CanvasGroup>();
     }
 
-    void Update()
+    public void UseScreen()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isBusy)
-        {
-            WriteRandomMessage();
-        }
+        WriteRandomMessage();
     }
 
     public void EnableHUD()

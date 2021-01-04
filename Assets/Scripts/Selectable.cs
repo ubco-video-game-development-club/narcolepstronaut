@@ -1,27 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using cakeslice;
 
 public class Selectable : MonoBehaviour
 {
-    public CanvasGroup textGroup;
+    public CanvasGroup targettedTextGroup;
+    public UnityEvent onSelected = new UnityEvent();
 
-    private Outline outline;
+    protected Outline outline;
+    protected CanvasGroup textGroup;
 
     void Awake()
     {
         outline = GetComponent<Outline>();
+        textGroup = targettedTextGroup;
     }
 
     void Update()
     {
-        bool isTargetted = LookSelector.instance.GetTarget() == this;
-        EnableText(isTargetted);
-        outline.enabled = isTargetted;
+        SetTargetted(LookSelector.instance.GetTarget() == this);
     }
 
-    public void EnableText(bool enabled)
+    public virtual void Select()
+    {
+        onSelected.Invoke();
+    }
+
+    protected virtual void SetTargetted(bool targetted)
+    {
+        EnableText(targetted);
+        outline.enabled = targetted;
+    }
+
+    protected void EnableText(bool enabled)
     {
         textGroup.alpha = enabled ? 1 : 0;
         textGroup.blocksRaycasts = enabled;
