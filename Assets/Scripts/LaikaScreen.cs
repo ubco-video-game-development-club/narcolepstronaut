@@ -10,7 +10,7 @@ public class LaikaScreen : Selectable
     {
         EnableText(false);
         textGroup = LaikaHUD.instance.IsLaikaBusy() ? errorTextGroup : targettedTextGroup;
-
-        base.SetTargetted(targetted);
+        outline.enabled = targetted && !LaikaHUD.instance.IsLaikaBusy();
+        EnableText(targetted);
     }
 }

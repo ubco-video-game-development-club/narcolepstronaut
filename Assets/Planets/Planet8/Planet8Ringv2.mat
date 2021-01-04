@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AlienPlanetRing
+  m_Name: Planet8Ringv2
   m_Shader: {fileID: 4800000, guid: 1a293e30462ff924ea9864c2bb699046, type: 3}
   m_ShaderKeywords: MOBILE_OFF
   m_LightmapFlags: 5
