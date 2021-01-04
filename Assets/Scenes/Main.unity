@@ -9004,10 +9004,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1144756565}
-  goodnight1: {fileID: 0}
-  goodnight2: {fileID: 0}
-  goodnight3: {fileID: 0}
-  goodnight4: {fileID: 0}
+  goodnight1: {fileID: 8300000, guid: 8bca0f0dc423e474e9a3b29a3d8ab454, type: 3}
+  goodnight2: {fileID: 8300000, guid: 2e85c6496b2f32d498c1803a25425206, type: 3}
+  goodnight3: {fileID: 8300000, guid: 98c4fc03ba941664ab01f3c9ff8649ea, type: 3}
+  goodnight4: {fileID: 8300000, guid: 59ea786aabf11244e9ca16cb0632c5ed, type: 3}
   maxSleepiness: 200
   sleepinessRate: 10
   coffeeValue: 50
