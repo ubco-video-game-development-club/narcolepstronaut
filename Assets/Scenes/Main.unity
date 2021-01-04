@@ -8894,6 +8894,10 @@ MonoBehaviour:
   maxCoffeeUses: 6
   wirePokeValue: 150
   wireZapChance: 0.2
+  minIntensity: 0.3
+  maxIntensity: 1
+  noiseScale: 10
+  noiseRate: 0.1
   sleepEnding: {fileID: 0}
   zappedEnding: {fileID: 0}
 --- !u!1 &1272890671

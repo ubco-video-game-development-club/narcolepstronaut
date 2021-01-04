@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class SleepinessSystem : MonoBehaviour
 {
@@ -10,12 +11,16 @@ public class SleepinessSystem : MonoBehaviour
 
     // High sleepiness means you're more awake. Idk lol
     public float maxSleepiness = 200f;
-    public float sleepinessRate = 10f;
+    public float sleepinessRate = 4f;
     public float coffeeValue = 75f;
     public int minCoffeeUses = 5;
     public int maxCoffeeUses = 10;
     public float wirePokeValue = 100f;
     public float wireZapChance = 0.2f;
+    public float minIntensity = 0.2f;
+    public float maxIntensity = 1f;
+    public float noiseScale = 10f;
+    public float noiseRate = 0.1f;
     public EndingMessage sleepEnding;
     public EndingMessage zappedEnding;
 
@@ -23,6 +28,8 @@ public class SleepinessSystem : MonoBehaviour
     private int totalCoffeeUses;
     private int numCoffeeUses;
     private bool isCoffeeAvailable = true;
+
+    private Vignette vignetteSettings;
 
     void Awake()
     {
@@ -33,6 +40,8 @@ public class SleepinessSystem : MonoBehaviour
         }
         instance = this;
 
+        vignetteSettings = Camera.main.GetComponent<PostProcessVolume>().profile.GetSetting<Vignette>();
+
         totalCoffeeUses = Random.Range(minCoffeeUses, maxCoffeeUses);
         sleepiness = maxSleepiness;
     }
@@ -41,6 +50,14 @@ public class SleepinessSystem : MonoBehaviour
     {
         sleepiness -= sleepinessRate * Time.deltaTime;
 
+        // Apply visual eyes closing effect
+        if (sleepiness < maxSleepiness / 2)
+        {
+            float noise = Mathf.PerlinNoise(sleepiness * noiseRate, sleepiness * noiseRate) * noiseScale;
+            float currentIntensity = ((maxSleepiness / 2) - sleepiness + noise) / (maxSleepiness / 2 + noiseScale);
+            vignetteSettings.intensity.value = Mathf.Lerp(minIntensity, maxIntensity, currentIntensity);
+        }
+        
         if (sleepiness <= 0 && player.IsAlive())
         {
             EndingMenu.instance.PlayEnding(sleepEnding.message);
