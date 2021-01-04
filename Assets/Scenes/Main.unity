@@ -6237,7 +6237,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d68629f75439314db3f3616c07dc7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  achievements: []
+  achievements:
+  - {fileID: 11400000, guid: af0b61e6c2320594c9a7ac01d8e9297f, type: 2}
+  - {fileID: 11400000, guid: da11fb26ad1bcde479cda6618f821586, type: 2}
+  - {fileID: 11400000, guid: 28633dd3d034adb49a7cbc5e008e8656, type: 2}
+  - {fileID: 11400000, guid: ca668db332ac5fd40a372135f813a5c5, type: 2}
+  - {fileID: 11400000, guid: 3ccae52c7b1c8624fbe9600692cceeba, type: 2}
+  - {fileID: 11400000, guid: cc77a34b3135bf8429606a9f6b64583d, type: 2}
+  - {fileID: 11400000, guid: 02ce93a15b4091e45824a42d6eaf773d, type: 2}
+  - {fileID: 11400000, guid: e2a5e0df09aa8624e9ff3df4ae10051e, type: 2}
+  - {fileID: 11400000, guid: 80f27e9c2520a124e906ab403e217edd, type: 2}
 --- !u!1 &362500868
 GameObject:
   m_ObjectHideFlags: 0
