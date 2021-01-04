@@ -21,6 +21,7 @@ public class AchievementSystem : MonoBehaviour
             return;
         }
         instance = this;
+        DontDestroyOnLoad(gameObject);
 
         LoadAchievements();
     }

@@ -24,7 +24,7 @@ public class Planet : Selectable
 
     public override void Select()
     {
-        EndingMenu.instance.VisitPlanet(endingMessage.message);
+        EndingMenu.instance.PlayEnding(endingMessage.message);
         AchievementSystem.instance.AcquireAchievement(endingMessage.endingNumber);
     }
 }
