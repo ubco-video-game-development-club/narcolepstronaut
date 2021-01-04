@@ -47,14 +47,13 @@ public class LaikaHUD : MonoBehaviour
         disableDelayInstruction = new WaitForSeconds(disableDelay);
 
         hudGroup = GetComponent<CanvasGroup>();
+
+        ShuffleMessages();
     }
 
-    void Update()
+    public void UseScreen()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !isBusy)
-        {
-            WriteRandomMessage();
-        }
+        WriteRandomMessage();
     }
 
     public void EnableHUD()
@@ -82,6 +81,7 @@ public class LaikaHUD : MonoBehaviour
 
         string message = messages[messageIndex].message;
         messageIndex = (messageIndex + 1) % messages.Length;
+        if (messageIndex == 0) ShuffleMessages();
 
         return WriteMessage(message);
     }
@@ -141,5 +141,15 @@ public class LaikaHUD : MonoBehaviour
         hudGroup.alpha = enabled ? 1 : 0;
         hudGroup.blocksRaycasts = enabled;
         hudGroup.interactable = enabled;
+    }
+    
+    private void ShuffleMessages()
+    {
+        for (var i = 0; i < messages.Length - 1; ++i) {
+            var r = Random.Range(i, messages.Length);
+            var temp = messages[i];
+            messages[i] = messages[r];
+            messages[r] = temp;
+        }
     }
 }

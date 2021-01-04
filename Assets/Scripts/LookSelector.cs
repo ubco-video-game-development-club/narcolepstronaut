@@ -24,6 +24,7 @@ public class LookSelector : MonoBehaviour
 
     void Update()
     {
+        // Update target
         bool didHit = Physics.SphereCast(
             transform.position,
             selectionRadius,
@@ -36,6 +37,12 @@ public class LookSelector : MonoBehaviour
         if (!didHit || !hitInfo.transform.TryGetComponent<Selectable>(out target))
         {
             target = null;
+        }
+
+        // Handle selection input
+        if (Input.GetKeyDown(KeyCode.E) && target != null)
+        {
+            target.Select();
         }
     }
 
