@@ -114,8 +114,8 @@ public class LaikaHUD : MonoBehaviour
         isBusy = true;
 
         bool isAlt = Random.value < altSoundChance;
-        if (isAlt) audioSource.PlayOneShot(altStartupSound);
-        else audioSource.PlayOneShot(startupSound);
+        if (isAlt) audioSource.PlayOneShot(altStartupSound, 0.3f);
+        else audioSource.PlayOneShot(startupSound, 0.3f);
 
         if (!hudEnabled)
         {
@@ -134,7 +134,7 @@ public class LaikaHUD : MonoBehaviour
             foreach (char c in chars)
             {
                 textbox.text += c;
-                audioSource.PlayOneShot(keyboardSound, 0.5f);
+                audioSource.PlayOneShot(keyboardSound, 0.1f);
                 yield return charDelayInstruction;
             }
 
