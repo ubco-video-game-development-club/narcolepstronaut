@@ -7,8 +7,19 @@ public class Coffee : Selectable
     public CanvasGroup errorTextGroup;
     public float coffeeCooldown = 2f;
 
-    private bool onCooldown = false;
+    public AudioClip badCoffee;
+    public AudioClip coffee;
+    public AudioClip grossCoffee;
+    public AudioClip staleCoffee;
 
+    private bool onCooldown = false;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+    
     override protected void SetTargetted(bool targetted)
     {
         base.SetTargetted(false);
@@ -26,8 +37,17 @@ public class Coffee : Selectable
 
     public override void Select()
     {
-        if (!SleepinessSystem.instance.IsCoffeeAvailable()) return;
+
+        if (!SleepinessSystem.instance.IsCoffeeAvailable()) return; 
+    
         if (onCooldown) return;
+
+        int x = Random.Range(1,5);
+
+        if (x == 1) audioSource.PlayOneShot(badCoffee);
+        else if (x == 2) audioSource.PlayOneShot(coffee);
+        else if (x == 3) audioSource.PlayOneShot(grossCoffee);
+        else audioSource.PlayOneShot(staleCoffee);
 
         StartCoroutine(CoffeeCooldown());
 

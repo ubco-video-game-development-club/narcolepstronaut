@@ -9,6 +9,11 @@ public class SleepinessSystem : MonoBehaviour
 
     public Player player;
 
+    public AudioClip goodnight1;
+    public AudioClip goodnight2;
+    public AudioClip goodnight3;
+    public AudioClip goodnight4;
+
     // High sleepiness means you're more awake. Idk lol
     public float maxSleepiness = 200f;
     public float sleepinessRate = 4f;
@@ -29,7 +34,14 @@ public class SleepinessSystem : MonoBehaviour
     private int numCoffeeUses;
     private bool isCoffeeAvailable = true;
 
+    private AudioSource audioSource;
+
     private Vignette vignetteSettings;
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Awake()
     {
@@ -60,6 +72,13 @@ public class SleepinessSystem : MonoBehaviour
         
         if (sleepiness <= 0 && player.IsAlive())
         {
+            int x = Random.Range(1,5);
+
+            if (x == 1) audioSource.PlayOneShot(goodnight1);
+            else if (x == 2) audioSource.PlayOneShot(goodnight2);
+            else if (x == 3) audioSource.PlayOneShot(goodnight3);
+            else audioSource.PlayOneShot(goodnight4);
+            
             EndingMenu.instance.PlayEnding(sleepEnding.message);
             AchievementSystem.instance.AcquireAchievement(sleepEnding.endingNumber);
         }
