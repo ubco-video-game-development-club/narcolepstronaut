@@ -6,5 +6,5 @@ using UnityEngine;
 public class Achievement : ScriptableObject
 {
     public int endingNumber;
-    public string hint;
+    public string title;
 }

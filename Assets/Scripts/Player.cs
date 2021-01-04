@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public float movementSpeed;
     public float rollSpeed;
 
+    private bool alive = true;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -14,7 +16,18 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        if (!alive) return;
         transform.position += transform.forward * movementSpeed * Time.deltaTime;
         transform.eulerAngles += Vector3.forward * rollSpeed * Time.deltaTime;
+    }
+
+    public void Die()
+    {
+        alive = false;
+    }
+
+    public bool IsAlive()
+    {
+        return alive;
     }
 }

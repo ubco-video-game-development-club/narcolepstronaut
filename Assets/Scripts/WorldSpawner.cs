@@ -16,6 +16,7 @@ public class WorldSpawner : MonoBehaviour
     public float maxPlanetSpawnGap;
 
     public float maxGameDuration;
+    public EndingMessage survivalEnding;
 
     private int spawnIndex = 0;
     private int planetIndex = 0;
@@ -41,6 +42,15 @@ public class WorldSpawner : MonoBehaviour
         ShufflePlanets();
         ShuffleSpawnpoints();
         SpawnPlanets();
+    }
+
+    void Update()
+    {
+        if (Time.time > maxGameDuration && player.IsAlive())
+        {
+            EndingMenu.instance.PlayEnding(survivalEnding.message);
+            AchievementSystem.instance.AcquireAchievement(survivalEnding.endingNumber);
+        }
     }
 
     private void SpawnPlanets()

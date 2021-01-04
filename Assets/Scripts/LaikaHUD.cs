@@ -134,7 +134,7 @@ public class LaikaHUD : MonoBehaviour
             foreach (char c in chars)
             {
                 textbox.text += c;
-                audioSource.PlayOneShot(keyboardSound, 0.8f);
+                audioSource.PlayOneShot(keyboardSound, 0.5f);
                 yield return charDelayInstruction;
             }
 

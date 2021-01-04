@@ -6,6 +6,7 @@ public class EndingMenu : MonoBehaviour
 {
     public static EndingMenu instance;
 
+    public Player player;
     public TMPro.TextMeshProUGUI textbox;
 
     public float initDelay = 0.5f;
@@ -14,6 +15,8 @@ public class EndingMenu : MonoBehaviour
     public float wordDelay = 0.1f;
     public float clearDelay = 4f;
 
+    public AudioClip keyboardSound;
+
     private WaitForSeconds initDelayInstruction;
     private WaitForSeconds startDelayInstruction;
     private WaitForSeconds charDelayInstruction;
@@ -21,6 +24,7 @@ public class EndingMenu : MonoBehaviour
     private WaitForSeconds clearDelayInstruction;
 
     private CanvasGroup hudGroup;
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -38,14 +42,17 @@ public class EndingMenu : MonoBehaviour
         clearDelayInstruction = new WaitForSeconds(clearDelay);
 
         hudGroup = GetComponent<CanvasGroup>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    public void VisitPlanet(string message)
+    public void PlayEnding(string message)
     {
-        StartCoroutine(WritePlanetMessage(message));
+        if (!player.IsAlive()) return;
+        player.Die();
+        StartCoroutine(WriteTimedMessage(message));
     }
 
-    private IEnumerator WritePlanetMessage(string message)
+    private IEnumerator WriteTimedMessage(string message)
     {
         EnableHUDGroup(true);
         textbox.text = "";
@@ -63,6 +70,7 @@ public class EndingMenu : MonoBehaviour
             foreach (char c in chars)
             {
                 textbox.text += c;
+                audioSource.PlayOneShot(keyboardSound, 0.1f);
                 yield return charDelayInstruction;
             }
 
