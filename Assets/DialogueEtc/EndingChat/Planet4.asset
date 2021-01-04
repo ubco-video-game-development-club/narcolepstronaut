@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3daeebff726e54f828094d20ca53ce, type: 3}
+  m_Name: Planet4
+  m_EditorClassIdentifier: 
+  endingNumber: 10
+  message: "Planet Synopsis:\r\n\r\nTemperature: -2 Degrees Celsius\r\nAir Quality:
+    Good\r\nTerrestrial Surface Coverage: 78%\r\n\r\nThis planet is covered in a
+    lush and stunning forest where it seems as if most water travels below the planet\u2019s
+    crust to the roots underneath. The rest of the water is store in two large bodies
+    of water at both polls. The fauna on the planet oddly enough seems to be found
+    primarily underground. Also, I made a note of how much heat was coming off the
+    trees. It seems rather high when in comparison to other flora in my database.
+    This leads me to believe that the trees may have carnivorous fruit similar to
+    the pitcher plants of the earth. Maybe this lends its hand to why the rest of
+    the organisms remain subterranean.\r\n\r\nMaybe if you and the trees don\u2019t
+    hit it off the mole people will."

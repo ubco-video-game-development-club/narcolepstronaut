@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3daeebff726e54f828094d20ca53ce, type: 3}
+  m_Name: Planet7
+  m_EditorClassIdentifier: 
+  endingNumber: 6
+  message: "Planet Synopsis:\r\n\r\nTemperature: 0 Degrees Celsius\r\nAir Quality:
+    Mediocre (Meh)\r\nTerrestrial Surface Coverage: 30% \r\n\r\nThe air is manageable
+    in small dosages but you will need to intermittently put your helmet back on
+    or return to the ship. Every time you come back and forth between the ship and
+    the planet\u2019s surface I am programmed to make awful jokes about \u201CNot
+    seeing you in forever.\u201D My calculations say the bit will get old after 4
+    repetitions. Organisms are primarily aquatic and seem to be relatively small
+    in size similar to phytoplankton on Earth. With an educated guess one can assume
+    they are the primary contributors to the planet\u2019s atmosphere being somewhat
+    tolerable. As long as they can photosynthesize like their earthly counterparts.
+    My calculations say there is a 99.9999 % chance you will carry on and continue
+    to eat MRE\u2019s while enjoying waterfront views. However, there is a 0.0001%
+    chance you\u2019ll develop baleen like a whale.\r\n\r\nThe second option could
+    take a while."

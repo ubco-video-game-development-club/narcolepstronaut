@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3daeebff726e54f828094d20ca53ce, type: 3}
+  m_Name: Planet5
+  m_EditorClassIdentifier: 
+  endingNumber: 2
+  message: "Planet Synopsis:\r\n\r\nTemperature: -40 Degrees Celsius\r\nAir Quality:
+    Good\r\nTerrestrial Surface Coverage: 25% (60% is Ice)\r\n\r\nWell, there have
+    been warmer planets. However, this is your choice so I\u2019ll begrudgingly respect
+    it. My scans show that the planet is primarily ice and very little exposed water
+    can be found throughout most of the year. Scans for life show a strong aquatic
+    presence with very little happening above the ice surface. Using my most advanced
+    calculations and algorithms I am making a bold guess in saying you have a 70%
+    chance of being miserable and cold. The other 30% is the chance that you will
+    find a non-thicc piece of ice and turn yourself into one of those popsicles you
+    spoke so fondly off.\r\n\r\nThat will show you to not critique my automated MRE
+    cooking."

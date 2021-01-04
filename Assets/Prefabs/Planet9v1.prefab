@@ -135,7 +135,7 @@ MonoBehaviour:
   onSelected:
     m_PersistentCalls:
       m_Calls: []
-  endingMessage: {fileID: 0}
+  endingMessage: {fileID: 11400000, guid: df44be6dac1aced4ebbd625ca6b97346, type: 2}
   textOffset: {x: -50, y: 25}
   rotationAxis: {x: 1, y: 0, z: 0}
   rotationSpeed: 1

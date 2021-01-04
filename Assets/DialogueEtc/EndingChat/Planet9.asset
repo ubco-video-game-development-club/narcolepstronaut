@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3daeebff726e54f828094d20ca53ce, type: 3}
+  m_Name: Planet9
+  m_EditorClassIdentifier: 
+  endingNumber: 9
+  message: "Planet Synopsis:\r\n\r\nTemperature: 3 Degrees Celsius\r\nAir Quality:
+    Bad (Helmet and respirator highly recommended)\r\nTerrestrial Surface Coverage:
+    32%\r\n\r\nThis planet was an exceptionally poor choice Handsome. As a machine,
+    I have no reason to be pessimistic but yet I am. All bodies of liquid on the
+    planet seem to be highly corrosive and my organic life scans only can detect
+    microorganisms that cannot be harvested to eat. What little land there is on
+    the planet is constantly being bombarded by acidic rain and strong violent winds.
+    Despite all of this, however. There seems to be a 30% chance of survival and
+    success on the planet as long as the ship is never departed from. The other 70%
+    chance represents the outcome where you develop cabin fever and go taste the
+    acid water in a desperate attempt to taste something besides MRE\u2019s.\r\n\r\nIf
+    you do taste the acid please input your tasting notes into my database prior
+    to your passing.\r"
