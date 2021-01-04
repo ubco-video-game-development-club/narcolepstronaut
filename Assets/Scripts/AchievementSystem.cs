@@ -23,6 +23,8 @@ public class AchievementSystem : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
+        acquiredAchievements = new Dictionary<Achievement, bool>();
+
         LoadAchievements();
     }
 

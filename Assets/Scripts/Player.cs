@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Cockpit cockpit;
     public float movementSpeed;
     public float rollSpeed;
 
@@ -23,6 +24,7 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
+        cockpit.Silence();
         alive = false;
     }
 

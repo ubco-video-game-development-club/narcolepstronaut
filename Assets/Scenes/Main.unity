@@ -6434,6 +6434,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 204155125928160958, guid: 9b303c1519361b54cbaa1e1bebac1a1b, type: 3}
   m_PrefabInstance: {fileID: 720607673}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &463016578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463016577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c30342cc36edc3a4ba78d80bcab8e7e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &463016579
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8285,6 +8297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d9ce08c1a8344d4a82ee89e2aa02bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cockpit: {fileID: 463016578}
   movementSpeed: 4
   rollSpeed: 0.3
 --- !u!1 &1150900559
