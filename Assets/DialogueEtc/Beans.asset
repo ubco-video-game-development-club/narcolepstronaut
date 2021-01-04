@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f5d9aafacf6872428f83ef0535f4b62, type: 3}
-  m_Name: Example2
+  m_Name: Beans
   m_EditorClassIdentifier: 
-  sleepinessBoost: 3
-  message: Wow, planets. Incredible.
+  sleepinessBoost: 5
+  message: "What\u2019s your favourite MRE? Mine is the beans and toast one. Not
+    because I can taste but I can tell it makes you upset."
