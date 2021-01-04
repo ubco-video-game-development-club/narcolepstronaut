@@ -6833,7 +6833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc8208994bb3a974e8da755004559f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectionRange: 100
+  selectionRange: 500
   selectionRadius: 0.4
   selectionLayer:
     serializedVersion: 2

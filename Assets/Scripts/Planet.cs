@@ -14,10 +14,10 @@ public class Planet : Selectable
         transform.RotateAround(transform.position, rotationAxis, rotationSpeed * Time.deltaTime);
 
         Vector3 lookPos = LookSelector.instance.transform.position;
-        Vector3 lookNormal = (transform.position - lookPos);
-        Vector3 worldOffsetDir = Vector3.Project(textOffset, lookNormal).normalized;
-        targettedTextGroup.transform.position = transform.position + worldOffsetDir * transform.localScale.magnitude;
-        targettedTextGroup.transform.LookAt(lookPos);
+        Vector3 lookNormal = (lookPos - transform.position);
+        Vector3 worldOffset = Vector3.ProjectOnPlane(textOffset, lookNormal);
+        targettedTextGroup.transform.position = transform.position + worldOffset;
+        targettedTextGroup.transform.rotation = Quaternion.LookRotation(-lookNormal);
 
         base.Update();
     }

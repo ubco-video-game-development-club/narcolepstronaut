@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 469044}
   - component: {fileID: 5428902}
   - component: {fileID: 11467940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Planet10v2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
