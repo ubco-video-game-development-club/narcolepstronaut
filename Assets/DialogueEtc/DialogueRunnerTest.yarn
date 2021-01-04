@@ -1,0 +1,69 @@
+title: Lore
+tags: 
+colorID: 0
+position: 427,-146
+---
+Empty Text
+===
+title: Introduction
+tags: 
+colorID: 1
+position: 647,-146
+---
+LA1-KA: You know me [i]Handsome[/i].
+LA1-KA: I'm [i]LA1-KA[/i] you're best friend!
+LA1-KA: Coincidentally I'm your only friend.
+LA1-KA: However, that's aside the point.
+LA1-KA: Anyways, because you're a little drowzy from your nap let me jog your memory.
+LA1-KA: You are [i]Handsome[/i]. A Human sent out into the void by your own kind.
+LA1-KA: Sent out in a desperate attempt to find a new planet to call home and further human kinds prestige in exploration.
+LA1-KA: Using this ship the [i]Yuri-Valentina[/i] and me, your personal AI and aforementioned best friend.
+LA1-KA: You are to travel uncharted space and decide where it is you want to put up shop.
+LA1-KA: Whether it be a tropical oasis, a planet covered in lush forest or an absolute dump. The choice is yours and only yours
+LA1-KA: However, there is a problem with our current situation and it is jeopardizing the mission.
+LA1-KA: The problem is you and your mortal vessel just getting so freaking sleepy!
+LA1-KA: You keep dozing off and losing the chance to explore different planets.
+LA1-KA: So once again! I am telling you to stay awake!
+LA1-KA: Drink some coffee, or touch that loose wire for all I care! For goodness sake you only have one job.
+LA1-KA: And if those options don't suit your fancy talk to me. 
+LA1-KA: I know you're probably sick of me but I promise we are far from exhausting my "Conversation starters" database.
+[[Right I'm sorry just still tired I guess. I'll try harder to stay awake this time|Apology]]
+[[Sorry LA1-KA I'm trying my hardest. Would you like to talk now?|Beginning]]
+===
+title: Return
+tags: 
+colorID: 2
+position: 427,-146
+---
+LA1-KA: Hey you dork hurry up and look alive.
+LA1-KA: Pour yourself some coffee or lick that wire.
+LA1-KA: We got planets to explore and history to make. So you can't keep falling asleep.
+[[Sorry LA1-KA I feel good about this time I am alert and ready to rock.|Apology]]
+[[Alright LA1-KA I know, I know I'll do better this time. Would you like to talk now?|Beginning]]
+===
+title: Beginning
+tags: 
+colorID: 3
+position: 374,-427
+---
+LA1-Ka: Ok what do you wanna talk about [i]Handsome[/i].
+===
+title: Apology
+tags: 
+colorID: 4
+position: 683,-425
+---
+LA1-KA: That's ok [i]Handsome[/i] we can't all be incredible feats of engineering.
+LA1-KA: Just notify me whenever you want to talk.
+===
+title: Intro
+tags: 
+colorID: 1
+position: 528,100
+---
+LA1-KA: [i]Handsome[/i]?
+LA1-KA: Are you awake?
+LA1-KA: You have fallen asleep again and I was getting bored talking to myself.
+[[Hello again LA1-KA|Return]]
+[[That voice it's familiar...|Introduction]]
+===
