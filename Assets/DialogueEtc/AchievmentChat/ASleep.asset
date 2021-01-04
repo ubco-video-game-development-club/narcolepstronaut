@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd923aad82a45e548827ce00890000be, type: 3}
   m_Name: ASleep
   m_EditorClassIdentifier: 
-  endingNumber: 0
-  hint: 
+  endingNumber: 11
+  title: 

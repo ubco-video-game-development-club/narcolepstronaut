@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3daeebff726e54f828094d20ca53ce, type: 3}
   m_Name: SurvivalEnding
   m_EditorClassIdentifier: 
-  endingNumber: 0
-  message: 
+  endingNumber: 12
+  message: "Hey there Handsome.\r\n\r\nYou did it! You somehow managed to pass completely
+    through that whole solar system without finding one planet you liked. You know
+    me and the Yuri Valentina can\u2019t run forever as much as that may seem untrue.
+    So even though you made it through you will have to settle down one day. I know
+    commitment is scary for you mortals with finite clocks. But I promise the rewards
+    and knowledge you find in a bit of stagnancy will be well worth giving up life
+    on the rainbow road. Also, I must say I am impressed you didn\u2019t doze off
+    again. Very unlike you but a welcome change.\r\n\r\nI always enjoy talking to
+    you. We are best friends after all.\r"
