@@ -9010,7 +9010,7 @@ MonoBehaviour:
   goodnight3: {fileID: 8300000, guid: 98c4fc03ba941664ab01f3c9ff8649ea, type: 3}
   goodnight4: {fileID: 8300000, guid: 59ea786aabf11244e9ca16cb0632c5ed, type: 3}
   maxSleepiness: 200
-  sleepinessRate: 10
+  sleepinessRate: 4
   coffeeValue: 50
   minCoffeeUses: 3
   maxCoffeeUses: 6
