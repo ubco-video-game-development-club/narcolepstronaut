@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3daeebff726e54f828094d20ca53ce, type: 3}
+  m_Name: SleepEnding
+  m_EditorClassIdentifier: 
+  endingNumber: 11
+  message: "It seems I have dozed off yet again. \r\n\r\nLAI-KA will be upset whenever
+    I wake up. And sure, maybe I will miss some breathtaking planets while resting
+    here. But, who is to say the best has already passed. The universe is ever-expanding
+    and accelerating. So with the Yuri Valentina travelling at a constant rate. I
+    sure do have a lot more universe explore. While I sleep and while I awake the
+    space engulfing my ship will continue to amaze and continue to strike awe. So
+    I might as well enjoy my rest while the opportunity is provided. Because only
+    a greater power knows the energy I\u2019ll need when I finally land on one of
+    those beautiful and mysterious worlds.\r\n\r\nThat being said I\u2019m going
+    to stop dreaming now\u2026...\r"

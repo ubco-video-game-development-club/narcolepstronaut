@@ -6247,6 +6247,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02ce93a15b4091e45824a42d6eaf773d, type: 2}
   - {fileID: 11400000, guid: e2a5e0df09aa8624e9ff3df4ae10051e, type: 2}
   - {fileID: 11400000, guid: 80f27e9c2520a124e906ab403e217edd, type: 2}
+  - {fileID: 11400000, guid: b181c47f0c66b174cba1d3078b4f7bca, type: 2}
+  - {fileID: 11400000, guid: 4d78c20fa33e44a408734b34ae688f4b, type: 2}
+  - {fileID: 11400000, guid: 3517d2a3120f35d4f9980fda9dd8e8dd, type: 2}
 --- !u!1 &362500868
 GameObject:
   m_ObjectHideFlags: 0
@@ -8873,7 +8876,7 @@ MonoBehaviour:
   minPlanetSpawnGap: 200
   maxPlanetSpawnGap: 300
   maxGameDuration: 600
-  survivalEnding: {fileID: 0}
+  survivalEnding: {fileID: 11400000, guid: 56ebfcf3ce17918429236e7bdb48e457, type: 2}
 --- !u!114 &1258894157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8898,8 +8901,8 @@ MonoBehaviour:
   maxIntensity: 1
   noiseScale: 10
   noiseRate: 0.1
-  sleepEnding: {fileID: 0}
-  zappedEnding: {fileID: 0}
+  sleepEnding: {fileID: 11400000, guid: 8bedfa58a3058474694b140d08eadd98, type: 2}
+  zappedEnding: {fileID: 11400000, guid: dce87bb350b62fe4bac9f5bab2b7041a, type: 2}
 --- !u!1 &1272890671
 GameObject:
   m_ObjectHideFlags: 0
