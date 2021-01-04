@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 23290770}
   - component: {fileID: 23290769}
   - component: {fileID: 23290768}
+  - component: {fileID: 23290773}
   - component: {fileID: 23290772}
   m_Layer: 5
   m_Name: LAI-KA HUD
@@ -241,13 +242,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textbox: {fileID: 1429017761}
+  holoLight: {fileID: 153952743}
   messages:
   - {fileID: 11400000, guid: 52aac5ba4078e304db18d97f70fdeb8a, type: 2}
   - {fileID: 11400000, guid: 2ea9f87277884e743b785f9a35180325, type: 2}
+  enableDelay: 0.4
   charDelay: 0.05
   wordDelay: 0.07
   clearDelay: 4
   deleteDelay: 0.05
+  disableDelay: 0.5
+--- !u!225 &23290773
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23290767}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &68168250
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +502,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153952741}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
