@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4428290205069502502}
   - component: {fileID: 4428290205067794786}
   - component: {fileID: 4428290205075810744}
+  - component: {fileID: 8321199070187202170}
   m_Layer: 0
   m_Name: Planet1
   m_TagString: Untagged
@@ -116,3 +117,17 @@ MonoBehaviour:
   hdrExposure: 1
   atmoColor: {r: 0.21568628, g: 0.6, b: 0.75686276, a: 1}
   atmoStrength: 10
+--- !u!114 &8321199070187202170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4428290205066072850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fbdb9a8c0124f6429b8c12c65dd3895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationAxis: {x: 1, y: 0, z: 0}
+  rotationSpeed: 1
