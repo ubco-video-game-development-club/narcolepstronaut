@@ -246,6 +246,21 @@ MonoBehaviour:
   messages:
   - {fileID: 11400000, guid: 52aac5ba4078e304db18d97f70fdeb8a, type: 2}
   - {fileID: 11400000, guid: 2ea9f87277884e743b785f9a35180325, type: 2}
+  - {fileID: 11400000, guid: fb35cfcbae22d914594acb1ea25daea4, type: 2}
+  - {fileID: 11400000, guid: c8651eca9f7551a4b8d1b9bb4dc5f507, type: 2}
+  - {fileID: 11400000, guid: 52d2459f406ce05449c017bc63c1d799, type: 2}
+  - {fileID: 11400000, guid: 854b350d9f598224aa351d2658347cb8, type: 2}
+  - {fileID: 11400000, guid: effdc0c71d3f1f444a2a984088fb6a69, type: 2}
+  - {fileID: 11400000, guid: 139c21d44fe1b4d4d828b3ac1fda5755, type: 2}
+  - {fileID: 11400000, guid: 57f3b67fc0bee7b4ea0fa5d57003cc72, type: 2}
+  - {fileID: 11400000, guid: 19b0d9611d6b9a54a827838b2c07de59, type: 2}
+  - {fileID: 11400000, guid: 6887476df8691cf40a87afa9efe764a8, type: 2}
+  - {fileID: 11400000, guid: 984ab7f8947ea5944b0840b5f0891494, type: 2}
+  - {fileID: 11400000, guid: 865f39904b617f44d80f2b79783a5a63, type: 2}
+  - {fileID: 11400000, guid: d58251581ff2f2949806acc0fd85513b, type: 2}
+  - {fileID: 11400000, guid: be752ccf2af197b4cbc32eca83cde39c, type: 2}
+  - {fileID: 11400000, guid: 974850afc4a09a144a35eb65ee0aae90, type: 2}
+  - {fileID: 11400000, guid: 716a6d2932041b54f8b0425e3fb79d04, type: 2}
   enableDelay: 0.4
   charDelay: 0.05
   wordDelay: 0.07

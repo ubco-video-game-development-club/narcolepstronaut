@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5d9aafacf6872428f83ef0535f4b62, type: 3}
+  m_Name: Concussion
+  m_EditorClassIdentifier: 
+  sleepinessBoost: 10
+  message: "Do you remember how you broke the ship exposing that wire? You fell asleep
+    in your chair and tipped over. Then you tried to concuss yourself on the tabletop.
+    If you don\u2019t remember that it\u2019s probably because you did concuss yourself."
