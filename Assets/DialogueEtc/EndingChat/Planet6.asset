@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce3daeebff726e54f828094d20ca53ce, type: 3}
+  m_Name: Planet6
+  m_EditorClassIdentifier: 
+  endingNumber: 3
+  message: 'Planet Synopsis:
+
+    
+
+    Temperature: 55 Degrees Celsius
+
+    Air
+    Quality: Poor (Lacklustre is an understatement)
+
+    Terrestrial Surface Coverage:
+    90%
+
+    
+
+    Well, Handsome you really did it this time. You managed to select
+    a planet that seems to be in a perpetual volcanic eruption. I track no life forms
+    larger than your beloved coffee pot and I can only assume they sustain themselves
+    by eating others of their kind. When I and you launched in the Yuri-Valentina
+    all that time ago they launched fireworks in celebration. But on this planet,
+    there is an 80% chance these fireworks will be the end of your mortal life. However,
+    if we manage to land and find an LZ accommodating enough for you to explore the
+    surface there is a 20% chance you will eat and eventually assume deity status
+    over the coffee pot monsters I mentioned earlier.
+
+    
+
+    Better hope you
+    end up playing God before you meet God.'
