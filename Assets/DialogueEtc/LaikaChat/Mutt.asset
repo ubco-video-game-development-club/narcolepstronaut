@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Mutt
   m_EditorClassIdentifier: 
   sleepinessBoost: 11
-  message: "I am named after a mutt named **Laika**who was the first dog ever sent
-    into space. I guess in a way I continue on as a human\u2019s best friend much
-    like a dog from back on earth.\r"
+  message: "I am named after a mutt named Laika who was the first dog ever sent into
+    space. I guess in a way I continue on as a human\u2019s best friend much like
+    a dog from back on earth.\r"
