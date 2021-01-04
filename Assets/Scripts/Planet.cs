@@ -5,7 +5,7 @@ using UnityEngine;
 public class Planet : Selectable
 {
     public EndingMessage endingMessage;
-    public Vector2 textOffset;
+    public Vector3 textOffset;
     public Vector3 rotationAxis;
     public float rotationSpeed;
 

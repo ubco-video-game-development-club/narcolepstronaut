@@ -136,7 +136,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   endingMessage: {fileID: 11400000, guid: 83c6d7f2cccfefb4094ce9312d4ab9fe, type: 2}
-  textOffset: {x: -70, y: 25}
+  textOffset: {x: -70, y: 25, z: 30}
   rotationAxis: {x: 1, y: 0, z: 0}
   rotationSpeed: 1
 --- !u!114 &-3561999446625304245

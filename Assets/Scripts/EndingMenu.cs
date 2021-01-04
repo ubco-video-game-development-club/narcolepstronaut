@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndingMenu : MonoBehaviour
 {
@@ -80,7 +81,8 @@ public class EndingMenu : MonoBehaviour
 
         yield return clearDelayInstruction;
 
-        // Load main menu
+        // UnityEngine.SceneManagement.SceneManager.LoadScene();
+        SceneManager.LoadScene("Menu");
     }
 
     private void EnableHUDGroup(bool enabled)
