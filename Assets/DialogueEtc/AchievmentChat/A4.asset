@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: A4
   m_EditorClassIdentifier: 
   endingNumber: 4
-  hint: If this planet was a spice it would be flour.
+  title: If this planet was a spice it would be flour.
