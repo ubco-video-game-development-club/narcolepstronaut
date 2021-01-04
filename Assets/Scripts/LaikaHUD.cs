@@ -10,18 +10,27 @@ public class LaikaHUD : MonoBehaviour
     public Light holoLight; 
 
     public LaikaMessage[] messages;
-    public float enableDelay = 0.3f;
+    public float enableDelay = 0.5f;
+    public float altEnableDelay = 20f;
+    public float startDelay = 0.3f;
     public float charDelay = 0.05f;
     public float wordDelay = 0.07f;
     public float clearDelay = 10f;
     public float deleteDelay = 0.05f;
     public float disableDelay = 0.5f;
 
+    public AudioClip keyboardSound;
+    public AudioClip startupSound;
+    public AudioClip altStartupSound;
+    public float altSoundChance;
+
     private int messageIndex = 0;
     private bool isBusy = false;
     private bool hudEnabled = false;
 
     private WaitForSeconds enableDelayInstruction;
+    private WaitForSeconds altEnableDelayInstruction;
+    private WaitForSeconds startDelayInstruction;
     private WaitForSeconds charDelayInstruction;
     private WaitForSeconds wordDelayInstruction;
     private WaitForSeconds clearDelayInstruction;
@@ -29,6 +38,7 @@ public class LaikaHUD : MonoBehaviour
     private WaitForSeconds disableDelayInstruction;
 
     private CanvasGroup hudGroup;
+    private AudioSource audioSource;
 
     void Awake()
     {
@@ -40,6 +50,8 @@ public class LaikaHUD : MonoBehaviour
         instance = this;
 
         enableDelayInstruction = new WaitForSeconds(enableDelay);
+        altEnableDelayInstruction = new WaitForSeconds(altEnableDelay);
+        startDelayInstruction = new WaitForSeconds(startDelay);
         charDelayInstruction = new WaitForSeconds(charDelay);
         wordDelayInstruction = new WaitForSeconds(wordDelay);
         clearDelayInstruction = new WaitForSeconds(clearDelay);
@@ -47,6 +59,7 @@ public class LaikaHUD : MonoBehaviour
         disableDelayInstruction = new WaitForSeconds(disableDelay);
 
         hudGroup = GetComponent<CanvasGroup>();
+        audioSource = GetComponent<AudioSource>();
 
         ShuffleMessages();
     }
@@ -100,12 +113,19 @@ public class LaikaHUD : MonoBehaviour
     {
         isBusy = true;
 
+        bool isAlt = Random.value < altSoundChance;
+        if (isAlt) audioSource.PlayOneShot(altStartupSound);
+        else audioSource.PlayOneShot(startupSound);
+
         if (!hudEnabled)
         {
+            if (isAlt) yield return altEnableDelayInstruction;
+            else yield return enableDelayInstruction;
             EnableHUD();
-            textbox.text = "> ";
-            yield return enableDelayInstruction;
         }
+        
+        textbox.text = "> ";
+        yield return startDelayInstruction;
 
         string[] words = message.Split(' ');
         foreach (string word in words)
@@ -114,6 +134,7 @@ public class LaikaHUD : MonoBehaviour
             foreach (char c in chars)
             {
                 textbox.text += c;
+                audioSource.PlayOneShot(keyboardSound, 0.8f);
                 yield return charDelayInstruction;
             }
 
