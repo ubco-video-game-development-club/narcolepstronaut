@@ -17,7 +17,7 @@ public class Planet : Selectable
         Vector3 lookNormal = (lookPos - transform.position);
         Vector3 worldOffset = Vector3.ProjectOnPlane(textOffset, lookNormal);
         targettedTextGroup.transform.position = transform.position + worldOffset;
-        targettedTextGroup.transform.rotation = Quaternion.LookRotation(-lookNormal);
+        targettedTextGroup.transform.rotation = Quaternion.LookRotation(-lookNormal, LookSelector.instance.transform.up);
 
         base.Update();
     }
