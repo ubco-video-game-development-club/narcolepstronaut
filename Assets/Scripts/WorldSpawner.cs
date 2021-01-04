@@ -46,10 +46,17 @@ public class WorldSpawner : MonoBehaviour
         while (curDistance < maxDistance)
         {
             curDistance += Random.Range(minPlanetSpawnGap, maxPlanetSpawnGap);
-            
+
             Vector3 horOffset = Random.Range(minPlanetOffset, maxPlanetOffset) * RandomSign() * refRight;
             Vector3 verOffset = Random.Range(minPlanetOffset, maxPlanetOffset) * RandomSign() * refUp;
             Vector3 spawnPos = spawnpoints[spawnIndex].position + curDistance * refForward + horOffset + verOffset;
+            spawnIndex++;
+            if (spawnIndex >= spawnpoints.Length)
+            {
+                spawnIndex = 0;
+                ShuffleSpawnpoints();
+            }
+
             spawnIndex = (spawnIndex + 1) % spawnpoints.Length;
             SpawnPlanet(spawnPos);
         }
@@ -73,6 +80,16 @@ public class WorldSpawner : MonoBehaviour
         // Spawn planet
         Planet planet = Instantiate(planetPrefab, spawnPos, randRotation);
         planet.transform.localScale = Vector3.one * randSize;
+    }
+
+    private void ShuffleSpawnpoints()
+    {
+        for (var i = 0; i < spawnpoints.Length - 1; ++i) {
+            var r = Random.Range(i, spawnpoints.Length);
+            var temp = spawnpoints[i];
+            spawnpoints[i] = spawnpoints[r];
+            spawnpoints[r] = temp;
+        }
     }
 
     private void ShufflePlanets()
