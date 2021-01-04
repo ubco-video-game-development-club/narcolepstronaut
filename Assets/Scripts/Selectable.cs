@@ -18,7 +18,7 @@ public class Selectable : MonoBehaviour
         textGroup = targettedTextGroup;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         SetTargetted(LookSelector.instance.GetTarget() == this);
     }

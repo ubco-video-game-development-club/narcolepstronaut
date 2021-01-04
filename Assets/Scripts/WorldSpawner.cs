@@ -38,6 +38,8 @@ public class WorldSpawner : MonoBehaviour
         refRight = player.transform.right;
         refUp = player.transform.up;
 
+        ShufflePlanets();
+        ShuffleSpawnpoints();
         SpawnPlanets();
     }
 
