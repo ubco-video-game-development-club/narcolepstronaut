@@ -35,9 +35,9 @@ public class AchievementSystem : MonoBehaviour
         SaveAchievements();
     }
 
-    public Dictionary<Achievement, bool> GetAcquiredAchievements()
+    public bool IsAcquired(Achievement achievement)
     {
-        return acquiredAchievements;
+        return acquiredAchievements[achievement];
     }
 
     private void SaveAchievements()
