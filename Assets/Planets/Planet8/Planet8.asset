@@ -103,5 +103,5 @@ MonoBehaviour:
   cloudColour1: {r: 0, g: 0, b: 0, a: 0}
   cloudSpin: 1
   cloudNormalScale: 0.01
-  size: 0
+  size: 5
   combineHeightWithCity: 1
