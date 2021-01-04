@@ -7,17 +7,19 @@ public class LaikaHUD : MonoBehaviour
     public static LaikaHUD instance;
 
     public TMPro.TextMeshProUGUI textbox;
-    [TextArea]
-    public string[] messages;
+    public LaikaMessage[] messages;
     public float charDelay = 0.05f;
     public float wordDelay = 0.07f;
-    public float clearDelay = 4f;
+    public float clearDelay = 10f;
+    public float deleteDelay = 0.05f;
 
     private WaitForSeconds charDelayInstruction;
     private WaitForSeconds wordDelayInstruction;
     private WaitForSeconds clearDelayInstruction;
+    private WaitForSeconds deleteDelayInstruction;
 
     private int messageIndex = 0;
+    private bool isBusy = false;
 
     void Awake()
     {
@@ -31,31 +33,45 @@ public class LaikaHUD : MonoBehaviour
         charDelayInstruction = new WaitForSeconds(charDelay);
         wordDelayInstruction = new WaitForSeconds(wordDelay);
         clearDelayInstruction = new WaitForSeconds(clearDelay);
+        deleteDelayInstruction = new WaitForSeconds(deleteDelay);
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isBusy)
         {
             WriteRandomMessage();
         }
     }
 
-    public void WriteRandomMessage()
+    public bool IsLaikaBusy()
     {
-        string message = messages[messageIndex];
-        WriteMessage(message);
-        messageIndex = (messageIndex + 1) % messages.Length;
+        return isBusy;
     }
 
-    public void WriteMessage(string message)
+    public float WriteRandomMessage()
     {
+        if (isBusy) return 0;
+
+        string message = messages[messageIndex].message;
+        messageIndex = (messageIndex + 1) % messages.Length;
+
+        return WriteMessage(message);
+    }
+
+    public float WriteMessage(string message)
+    {
+        if (isBusy) return 0;
+
         StopAllCoroutines();
         StartCoroutine(WriteTimedMessage(message));
+
+        return messages[messageIndex].sleepinessBoost;
     }
 
     private IEnumerator WriteTimedMessage(string message)
     {
+        isBusy = true;
         textbox.text = "> ";
 
         string[] words = message.Split(' ');
@@ -73,6 +89,14 @@ public class LaikaHUD : MonoBehaviour
         }
 
         yield return clearDelayInstruction;
-        textbox.text = "> ";
+
+        int deleteLength = textbox.text.Length - 2;
+        for (int i = 0; i < deleteLength; i++)
+        {
+            textbox.text = textbox.text.Substring(0, textbox.text.Length - 1);
+            yield return deleteDelayInstruction;
+        }
+
+        isBusy = false;
     }
 }

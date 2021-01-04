@@ -242,11 +242,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textbox: {fileID: 1429017761}
   messages:
-  - Greetings, handsome.
-  - Wow, planets. Incredible.
+  - {fileID: 11400000, guid: 52aac5ba4078e304db18d97f70fdeb8a, type: 2}
+  - {fileID: 11400000, guid: 2ea9f87277884e743b785f9a35180325, type: 2}
   charDelay: 0.05
   wordDelay: 0.07
   clearDelay: 4
+  deleteDelay: 0.05
 --- !u!1 &68168250
 GameObject:
   m_ObjectHideFlags: 0
@@ -7717,6 +7718,7 @@ GameObject:
   - component: {fileID: 1258894154}
   - component: {fileID: 1258894155}
   - component: {fileID: 1258894156}
+  - component: {fileID: 1258894157}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7884,6 +7886,20 @@ MonoBehaviour:
   minPlanetSpawnGap: 200
   maxPlanetSpawnGap: 300
   maxGameDuration: 600
+--- !u!114 &1258894157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1258894153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb16aa3c4851994d82dd73090e86557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSleepiness: 200
+  coffeeValue: 50
 --- !u!1 &1272890671
 GameObject:
   m_ObjectHideFlags: 0
