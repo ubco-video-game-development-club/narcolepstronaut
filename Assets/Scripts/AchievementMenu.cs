@@ -16,6 +16,14 @@ public class AchievementMenu : MonoBehaviour
 
     private AchievementItem[] achievementItems;
     private int page = 0;
+    private bool menuEnabled = false;
+
+    private CanvasGroup menuGroup;
+
+    void Awake()
+    {
+        menuGroup = GetComponent<CanvasGroup>();
+    }
 
     void Start()
     {
@@ -31,6 +39,12 @@ public class AchievementMenu : MonoBehaviour
         }
 
         UpdatePage();
+    }
+
+    public void ToggleMenu()
+    {
+        menuEnabled = !menuEnabled;
+        EnableMenu(menuEnabled);
     }
 
     public void NextPage()
@@ -79,5 +93,12 @@ public class AchievementMenu : MonoBehaviour
     private bool CanMovePrev()
     {
         return page > 0;
+    }
+
+    public void EnableMenu(bool enabled)
+    {
+        menuGroup.alpha = enabled ? 1 : 0;
+        menuGroup.blocksRaycasts = enabled;
+        menuGroup.interactable = enabled;
     }
 }
