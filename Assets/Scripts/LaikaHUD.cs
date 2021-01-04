@@ -7,17 +7,28 @@ public class LaikaHUD : MonoBehaviour
     public static LaikaHUD instance;
 
     public TMPro.TextMeshProUGUI textbox;
-    [TextArea]
-    public string[] messages;
+    public Light holoLight; 
+
+    public LaikaMessage[] messages;
+    public float enableDelay = 0.3f;
     public float charDelay = 0.05f;
     public float wordDelay = 0.07f;
-    public float clearDelay = 4f;
+    public float clearDelay = 10f;
+    public float deleteDelay = 0.05f;
+    public float disableDelay = 0.5f;
 
+    private int messageIndex = 0;
+    private bool isBusy = false;
+    private bool hudEnabled = false;
+
+    private WaitForSeconds enableDelayInstruction;
     private WaitForSeconds charDelayInstruction;
     private WaitForSeconds wordDelayInstruction;
     private WaitForSeconds clearDelayInstruction;
+    private WaitForSeconds deleteDelayInstruction;
+    private WaitForSeconds disableDelayInstruction;
 
-    private int messageIndex = 0;
+    private CanvasGroup hudGroup;
 
     void Awake()
     {
@@ -28,35 +39,73 @@ public class LaikaHUD : MonoBehaviour
         }
         instance = this;
 
+        enableDelayInstruction = new WaitForSeconds(enableDelay);
         charDelayInstruction = new WaitForSeconds(charDelay);
         wordDelayInstruction = new WaitForSeconds(wordDelay);
         clearDelayInstruction = new WaitForSeconds(clearDelay);
+        deleteDelayInstruction = new WaitForSeconds(deleteDelay);
+        disableDelayInstruction = new WaitForSeconds(disableDelay);
+
+        hudGroup = GetComponent<CanvasGroup>();
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !isBusy)
         {
             WriteRandomMessage();
         }
     }
 
-    public void WriteRandomMessage()
+    public void EnableHUD()
     {
-        string message = messages[messageIndex];
-        WriteMessage(message);
-        messageIndex = (messageIndex + 1) % messages.Length;
+        holoLight.enabled = true;
+        EnableHUDGroup(true);
+        hudEnabled = true;
     }
 
-    public void WriteMessage(string message)
+    public void DisableHUD()
     {
+        holoLight.enabled = false;
+        EnableHUDGroup(false);
+        hudEnabled = false;
+    }
+
+    public bool IsLaikaBusy()
+    {
+        return isBusy;
+    }
+
+    public float WriteRandomMessage()
+    {
+        if (isBusy) return 0;
+
+        string message = messages[messageIndex].message;
+        messageIndex = (messageIndex + 1) % messages.Length;
+
+        return WriteMessage(message);
+    }
+
+    public float WriteMessage(string message)
+    {
+        if (isBusy) return 0;
+
         StopAllCoroutines();
         StartCoroutine(WriteTimedMessage(message));
+
+        return messages[messageIndex].sleepinessBoost;
     }
 
     private IEnumerator WriteTimedMessage(string message)
     {
-        textbox.text = "> ";
+        isBusy = true;
+
+        if (!hudEnabled)
+        {
+            EnableHUD();
+            textbox.text = "> ";
+            yield return enableDelayInstruction;
+        }
 
         string[] words = message.Split(' ');
         foreach (string word in words)
@@ -73,6 +122,24 @@ public class LaikaHUD : MonoBehaviour
         }
 
         yield return clearDelayInstruction;
-        textbox.text = "> ";
+
+        int deleteLength = textbox.text.Length - 2;
+        for (int i = 0; i < deleteLength; i++)
+        {
+            textbox.text = textbox.text.Substring(0, textbox.text.Length - 1);
+            yield return deleteDelayInstruction;
+        }
+
+        yield return disableDelayInstruction;
+
+        DisableHUD();
+        isBusy = false;
+    }
+
+    private void EnableHUDGroup(bool enabled)
+    {
+        hudGroup.alpha = enabled ? 1 : 0;
+        hudGroup.blocksRaycasts = enabled;
+        hudGroup.interactable = enabled;
     }
 }
